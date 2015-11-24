@@ -1,14 +1,24 @@
 # Grafana docker image
 
-This container runs Grafana 2.1.0.
+This container runs Grafana 2.5.0.
 
-## Building the image
+## Composing the Test Environemnt
+
+Run:
+  `docker-compose build`
+
+## Running the entire Grafana Environment
+
+Run:
+  `docker-compose run grafana -d`
+
+## Building the image individually
 
 Run:
   `docker build --rm -t grafana .`
 
 
-## Running the image
+## Running the image individually
 
 The docker image is configured to set up a graphite datasource
 when run.  You must specify at minimum a graphite host.
