@@ -11,6 +11,4 @@ RUN apt-get update && \
 
 ADD ship.d /etc/ship.d
 
-VOLUME ["/var/lib/grafana", "/var/log/grafana", "/etc/grafana"]
-
 EXPOSE 3000

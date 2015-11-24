@@ -1,0 +1,15 @@
+grafana:
+  build: .
+  ports:
+    - "3000:3000"
+
+postgres:
+  image: "postgres"
+  environmnet:
+    POSTGRES_PASSWORD: "password"
+
+graphite:
+  image: "sitespeedio/graphite"
+  ports:
+    - "8080:80"
+    - "2003:2003"
