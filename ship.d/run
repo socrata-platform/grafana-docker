@@ -12,4 +12,7 @@ CMD="/usr/sbin/grafana-server \
   cfg:default.paths.logs=/var/log/grafana
 "
 
+export GF_AUTH_ANONYMOUS_ENABLED=true
+export GF_AUTH_ANONYMOUS_ORG_ROLE=Editor
+
 sudo -E -u grafana $CMD
