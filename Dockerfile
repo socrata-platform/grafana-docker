@@ -1,4 +1,4 @@
-FROM socrata/base
+FROM socrata/runit
 
 ENV GRAFANA_VERSION 2.5.0
 
