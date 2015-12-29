@@ -15,4 +15,4 @@ CMD="/usr/sbin/grafana-server \
 export GF_AUTH_ANONYMOUS_ENABLED=true
 export GF_AUTH_ANONYMOUS_ORG_ROLE=Editor
 
-sudo -E -u grafana $CMD
+exec /sbin/setuser grafana $CMD
