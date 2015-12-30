@@ -4,6 +4,7 @@
 #   export GF_DATABASE_USER=abc
 #   export GF_DATABASE_PASSWORD=def123
 if [ -z "$GF_DATABASE_USER" && -z "$GF_DATABASE_PASSWORD" ]; then
+    echo "** Loading auth data"
     . /dev/shm/grafana-db-pw.sh
 fi
 
