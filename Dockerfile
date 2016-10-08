@@ -1,6 +1,6 @@
 FROM socrata/runit
 
-ENV GRAFANA_VERSION 3.1.1
+ENV GRAFANA_VERSION 3.1.1-1470047149
 
 RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold" && \
     apt-get -y install libfontconfig wget adduser openssl ca-certificates && \
