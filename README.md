@@ -1,6 +1,6 @@
 # Grafana docker image
 
-This container runs Grafana 2.1.0.
+This container runs Grafana 3
 
 ## Building the image
 
