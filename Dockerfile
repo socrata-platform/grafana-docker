@@ -1,6 +1,6 @@
 FROM socrata/runit-bionic
 
-ENV GRAFANA_VERSION 6.1.0
+ENV GRAFANA_VERSION 6.2.2
 
 RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold" && \
     apt-get -y install libfontconfig wget adduser openssl ca-certificates && \
