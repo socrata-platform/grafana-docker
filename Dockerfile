@@ -1,4 +1,4 @@
-FROM socrata/runit-bionic
+FROM socrata/runit-focal
 
 ENV GRAFANA_VERSION 7.5.15
 
