@@ -14,7 +14,7 @@ pipeline {
   parameters {
     string(name: 'AGENT', defaultValue: 'build-worker', description: 'Which build agent to use?')
     string(name: 'BRANCH_SPECIFIER', defaultValue: 'origin/main', description: 'Which branch to build')
-    booleanParam(name: 'RELEASE_BUILD', defaultValue: false, description: 'Are we building a release candidate?')
+    booleanParam(name: 'RELEASE_BUILD', defaultValue: false, description: 'If false, publish to internal only and deploy to staging. If true, publish to all registries and deploy to rc')
   }
   agent {
     label params.AGENT
@@ -70,7 +70,7 @@ pipeline {
       withCredentials([string(credentialsId: 'EMAIL_TIRE', variable: 'EMAIL_TO')]) {
         emailext (
           to: EMAIL_TO,
-          subject: "${env.SERVICE} - [${env.BUILD_NUMBER}] failed in stage ${lastStage}",
+          subject: "[${currentBuild.fullDisplayName}](${env.BUILD_URL}) failed in stage ${lastStage}",
           body: """<p>Check console output at <a href='${env.BUILD_URL}'>${env.BUILD_URL}</a></p>""",
         )
       }
