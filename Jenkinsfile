@@ -1,4 +1,4 @@
-@Library('socrata-pipeline-library@6.1.0') _
+@Library('socrata-pipeline-library@9.0.0') _
 
 commonPipeline(
   jobName: 'grafana',
