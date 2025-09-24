@@ -7,7 +7,7 @@ commonPipeline(
     [
       name: 'grafana',
       type: 'service',
-      deploymentEcosystem: 'marathon-mesos',
+      deploymentEcosystem: 'ecs',
       paths: [
         dockerBuildContext: '.'
       ],
