@@ -1,4 +1,4 @@
-FROM socrata/runit-focal
+FROM socrata/runit-jammy
 
 ENV GRAFANA_VERSION 7.5.17
 
