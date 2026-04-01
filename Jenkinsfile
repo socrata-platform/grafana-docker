@@ -2,7 +2,6 @@
 
 commonPipeline(
   jobName: 'grafana',
-  language: 'bash',
   projects: [
     [
       name: 'grafana',
@@ -11,6 +10,7 @@ commonPipeline(
       docker: [
         buildContext: '.'
       ],
+      language: 'bash',
     ],
   ],
   teamsChannelWebhookId: 'WORKFLOW_TIRE_Q_AND_A',
