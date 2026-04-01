@@ -1,4 +1,4 @@
-@Library('socrata-pipeline-library@9.9.2') _
+@Library('socrata-pipeline-library@10.2.1') _
 
 commonPipeline(
   jobName: 'grafana',
@@ -8,8 +8,8 @@ commonPipeline(
       name: 'grafana',
       type: 'service',
       deploymentEcosystem: 'ecs',
-      paths: [
-        dockerBuildContext: '.'
+      docker: [
+        buildContext: '.'
       ],
     ],
   ],
