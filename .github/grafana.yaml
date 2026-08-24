@@ -1,0 +1,21 @@
+name: "grafana"
+
+on:
+  push:
+    branches:
+      - "main"
+      - "[A-Z][0-9][0-9]-HF"
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  build:
+    uses: socrata/release-test/.github/workflows/build.yaml@test-gha-complete-setup # TODO: set to latest version
+    with:
+      project-name: "grafana"
+      project-type: "service"
+      build-type: "default"

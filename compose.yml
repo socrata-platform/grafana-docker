@@ -1,0 +1,5 @@
+services:
+  grafana:
+    build:
+      context: '.'
+      dockerfile: Dockerfile
